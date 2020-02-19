@@ -2,7 +2,7 @@
 # zmodload zsh/zprof
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/dh/oh-my-zsh
+export ZSH=/home/dh/.oh-my-zsh
 
 # set code as editor
 export EDITOR=code
@@ -71,9 +71,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 source $ZSH/oh-my-zsh.sh
 
-# iterm2 shell integration
-source ~/.iterm2_shell_integration.zsh
-
 # custom key bindings
 bindkey '^[[1;3C' forward-word
 bindkey '^[[1;3D' backward-word
@@ -87,24 +84,8 @@ export GITLAB_TOKEN="$(echo $(<~/dh_values.json) | jq -r '.gitlab.scriptToken')"
 # K8s variables
 export KUBECONFIG=~/.kube/dh-test
 
-# ruby
-# eval "$(rbenv init -)"
-# export RBENV_ROOT="$HOME/.rbenv"
-
-# python
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
 # Groovy
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-
-# Python
-# if command -v pyenv 1>/dev/null 2>&1; then
-# 	eval "$(pyenv init -)"
-# 	eval "$(pyenv virtualenv-init -)"
-# fi
-# pyenv activate python3env 1>/dev/null 2>&1
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -124,10 +105,6 @@ source ~/.bash-my-aws/aliases
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 source ~/.bash-my-aws/bash_completion.sh
-
-# enable docker
-dmstatus=$(docker-machine status dh-docker-toolbox)
-if [ "$dmstatus" != "Running" ]; then sdocker; else edocker; fi
 
 # show startup time
 # zprof
