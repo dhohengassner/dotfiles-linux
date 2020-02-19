@@ -96,7 +96,7 @@ alias dtssh='docker-machine ssh dh-docker-toolbox'
 #alias dtssh="ssh -i ~/.docker/machine/machines/dh-docker-toolbox/id_rsa -p 49775 docker@localhost"
 
 # k8s
-alias kcdt='kubectl -n kube-system describe secret kubernetes-dashboard-token | awk '"'"'$1=="token:"{print $2}'"'"' | pbcopy'
+alias kcdt='kubectl -n kube-system describe secret kubernetes-dashboard-token | awk '"'"'$1=="token:"{print $2}'"'"' | xclip -sel clip'
 alias kpfm='kubectl port-forward $(kubectl get pods -n ingress-nginx -o name -l app=auth-ingress-nginx | head -n 1) 8443:443 -n ingress-nginx'
 
 # exa
