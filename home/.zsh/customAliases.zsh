@@ -1,8 +1,7 @@
 #! /usr/local/bin/zsh
 
-# important startup
-alias sdocker='source ~/start_docker.zsh'
-alias edocker='eval "$(docker-machine env dh-docker-toolbox)"'
+# start VM routing
+alias svm='~/dhstartup'
 
 # tmux aliases
 alias t='tmux attach || tmux new -s main'
