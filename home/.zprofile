@@ -18,4 +18,4 @@ export LESSCHARSET=utf-8
 # set important paths
 export GOPATH=$HOME/go
 export GOPRIVATE=appsgit.bethel.jw.org
-export PATH="$GOPATH/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin:/usr/local/go/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/.bash-my-aws/bin"
+export PATH="$GOPATH/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin:/usr/local/go/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/.bash-my-aws/bin:/home/dh/.local/bin/"

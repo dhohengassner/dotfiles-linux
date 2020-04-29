@@ -1,7 +1,8 @@
 #! /usr/local/bin/zsh
 
 # start VM routing
-alias svm='~/dhstartup'
+alias svm='~/pulse.sh start'
+alias stvm='~/pulse.sh stop'
 
 # tmux aliases
 alias t='tmux attach || tmux new -s main'

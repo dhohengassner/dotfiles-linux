@@ -1,0 +1,27 @@
+k9s:
+  refreshRate: 2
+  headless: false
+  readOnly: false
+  logBufferSize: 1000
+  logRequestSize: 200
+  currentContext: o11n-eks-o11n
+  currentCluster: o11n-eks-o11n
+  fullScreenLogs: false
+  clusters:
+    o11n-eks-o11n:
+      namespace:
+        active: shared-storage
+        favorites:
+        - shared-storage
+        - moodle-rehearse
+        - moodle
+        - default
+      view:
+        active: pods
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
