@@ -10,20 +10,27 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: o11n-eks-int-dh
-  currentCluster: o11n-eks-int-dh
+  currentContext: o11n-eks-o11n-union
+  currentCluster: o11n-eks-o11n-union
   clusters:
-    o11n-eks-int-dh:
+    o11n-eks-o11n-union:
       namespace:
-        active: ""
+        active: redmine
         favorites:
         - all
-        - monitoring
+        - redmine
         - default
       view:
-        active: deployment
+        active: pods
       featureGates:
         nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
   thresholds:
     cpu:
       critical: 90
