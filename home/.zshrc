@@ -108,3 +108,5 @@ source ~/.bash-my-aws/bash_completion.sh
 
 # show startup time
 # zprof
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin

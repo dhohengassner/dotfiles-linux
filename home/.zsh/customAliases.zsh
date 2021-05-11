@@ -123,3 +123,15 @@ alias be='bundle exec'
 # some other stuff
 alias re='/bin/zsh --login'
 alias h='history'
+
+# overwrite vault oidc login
+
+mkdir -p ~/.vault-tools
+
+cat > ~/.vault-tools/xdg-open <<EOF
+#!/bin/sh
+echo \$1 | xclip -sel c
+EOF
+chmod +x ~/.vault-tools/xdg-open
+
+alias vault-login-oidc="PATH=~/.vault-tools:$PATH vault login -method=oidc"
