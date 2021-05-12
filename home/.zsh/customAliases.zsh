@@ -130,7 +130,7 @@ mkdir -p ~/.vault-tools
 
 cat > ~/.vault-tools/xdg-open <<EOF
 #!/bin/sh
-echo \$1 | xclip -sel c
+\${BROWSER:-firefox} \$1
 EOF
 chmod +x ~/.vault-tools/xdg-open
 
